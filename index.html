@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+    <script src="script.js"></script>
+    <script src="plot.js"></script>
+    <script src="animate.js"></script>
+    <script src="data.js"></script>
+    <script src="vectors.js"></script>
+    <link rel="stylesheet" href="../styles.css">
+    <title>Graph</title>
+</head>
+<body>
+    <div class="graphic">
+        <div id="checkButtons">
+            <label class="container">Show vectors all time
+                <input type="checkbox" id="checkVectors">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div id="tester"></div>
+        <div id="buttons">
+            <button onclick="play()" id="btnPlay" class="btn">&#9205;</button>
+            <button onclick="pause()" id="btnPause" class="btn">&#9209;</button>
+            <input type="range" id="slider">
+            <p id="sliderValue">Time:&nbsp;<output id="time"></output>&nbsp;s</p>
+            <datalist id="tickmarks"></datalist>
+        </div>
+        <div id="data">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Auto 1</th>
+                        <th>Auto 2</th>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;Posicion</td>
+                        <td><output id="p1"></output></td>
+                        <td><output id="p2"></output></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;Velocidad</td>
+                        <td><output id="v1"></output></td>
+                        <td><output id="v2"></output></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;Aceleracion</td>
+                        <td><output id="a1"></output></td>
+                        <td><output id="a2"></output></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;Posicion relativa</td>
+                        <td colspan="2"><output id="pr"></output></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;Velocidad relativa</td>
+                        <td colspan="2"><output id="vr"></output></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;Aceleracion relativa</td>
+                        <td colspan="2"><output id="ar"></output></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
